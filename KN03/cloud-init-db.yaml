@@ -1,0 +1,19 @@
+# Cloud-Init-Skript für Datenbank-Server (database-server.yaml)
+
+# Aktualisieren der Paketliste
+package_update: true
+
+# Installieren der benötigten Pakete für den Datenbank-Server
+packages:
+  - mariadb-server
+
+# Datei erstellen, um die Datenbank-Konfiguration zu ändern
+write_files:
+  - path: /etc/mysql/mariadb.conf.d/50-server.cnf
+    content: |
+      # Hier sollte der Inhalt der Konfigurationsdatei stehen
+
+# Befehl zum Ändern der Datenbank-Konfiguration und Erlauben externer Verbindungen
+runcmd:
+  - sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
+  - systemctl restart mariadb

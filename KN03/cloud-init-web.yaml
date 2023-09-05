@@ -1,0 +1,30 @@
+# Cloud-Init-Skript für Web-Server (web-server.yaml)
+
+# Aktualisieren der Paketliste
+package_update: true
+
+# Installieren der benötigten Pakete für den Web-Server
+packages:
+  - apache2
+  - php
+  - libapache2-mod-php
+  - adminer  # Hinzufügen des Adminer-Pakets
+
+# Datei erstellen, um eine einfache PHP-Webseite zu erstellen
+write_files:
+  - path: /var/www/html/index.php
+    content: |
+      <?php
+      echo "Hello, World! This is a PHP web application.";
+    permissions: '0644'
+
+# Befehle zum Konfigurieren des Apache-Servers und Hinzufügen von Adminer
+runcmd:
+  - systemctl enable apache2
+  - systemctl start apache2
+
+# Fügt die Konfiguration für das Adminer-Paket zur Apache-Konfiguration hinzu
+  - sudo a2enconf adminer
+
+# Startet den Apache-Service neu, um die Änderungen zu übernehmen
+  - systemctl restart apache2
