@@ -1,0 +1,15 @@
+#cloud-config
+users:
+  - name: ubuntu #Benutzername
+    sudo: ALL=(ALL) NOPASSWD:ALL #Sudo-Regeln für diesen Benutzer
+    groups: users, admin #Ubunto wird den users und admin Gruppen zugeteilt
+    home: /home/ubuntu #Dort sind die persönlichen Files vom User Ubuntu
+    shell: /bin/bash #Wenn Ubuntu sich eingloggt, greift er auf diese Shell zu
+    ssh_authorized_keys: #Öffentlicher SSh-Key um eine Verbindung mit einem privaten Key zu erstellen.
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0WGP1EZykEtv5YGC9nMiPFW3U3DmZNzKFO5nEu6uozEHh4jLZzPNHSrfFTuQ2GnRDSt+XbOtTLdcj26+iPNiFoFha42aCIzYjt6V8Z+SQ9pzF4jPPzxwXfDdkEWylgoNnZ+4MG1lNFqa8aO7F62tX0Yj5khjC0Bs7Mb2cHLx1XZaxJV6qSaulDuBbLYe8QUZXkMc7wmob3PM0kflfolR3LE7LResIHWa4j4FL6r5cQmFlDU2BDPpKMFMGUfRSFiUtaWBNXFOWHQBC2+uKmuMPYP4vJC9sBgqMvPN/X2KyemqdMvdKXnCfrzadHuSSJYEzD64Cve5Zl9yVvY4AqyBD aws-key       
+ssh_pwauth: false #Behandelt die Authentifizierung über SSH Passwörter, welche hier deaktiviert ist.
+disable_root: false #Wird der direkte Root-Zugriff aktiviert oder nicht, hier aktiviert.
+package_update: true #Zuständig für Packetaktualisierungen, Suche nach Updates.
+packages: #Liste von Paketen und Softwarekomponenten, welche aktu
+  - curl 
+  - wget 
