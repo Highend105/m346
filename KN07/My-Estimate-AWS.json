@@ -1,0 +1,94 @@
+{
+	"Name": "My Estimate",
+	"Gesamtkosten": {
+		"monatlich": "231.95",
+		"Vorauszahlung": "0.00",
+		"12 Monate": "2783.40"
+	},
+	"Metadaten": {
+		"Währung": "USD",
+		"Gebietsschema": "de_DE",
+		"Erstellt am": "26.9.2023",
+		"Rechtlicher Haftungsausschluss": "Der AWS Pricing Calculator gibt nur einen Überblick über Ihre AWS-Gebühren und enthält keine anfallenden Steuern. Ihre tatsächlichen Gebühren hängen von einer Vielzahl von Faktoren ab, einschließlich Ihrer tatsächlichen Nutzung der AWS-Services.",
+		"URL teilen": "https://calculator.aws/#/estimate?id=e956587b021e15903b09761a1ae4625c987fe774"
+	},
+	"Gruppen": {
+		"Services": [
+			{
+				"Servicename": "Amazon EC2 ",
+				"Region": "Europa (Zürich)",
+				"Status": "",
+				"Service-Kosten": {
+					"monatlich": "20.02",
+					"Vorauszahlung": "0.00",
+					"12 Monate": "240.23"
+				},
+				"Eigenschaften": {
+					"Tenancy": "Gemeinsame Instances",
+					"Betriebssystem": "Linux",
+					"Workload": "Consistent, Anzahl der Instances: 1",
+					"Erweiterte EC2-Instance": "c6g.medium",
+					"Pricing strategy": "3 Year  None upfront",
+					"Überwachung aktivieren": "deaktiviert",
+					"EBS Speichermenge": "20 GB",
+					"DT Eingehend: Not selected": "0 TB pro Monat",
+					"DT Ausgehend: Not selected": "0 TB pro Monat",
+					"DT Intraregional:": "0 TB pro Monat"
+				}
+			},
+			{
+				"Servicename": "Amazon EC2 ",
+				"Region": "Europa (Zürich)",
+				"Status": "",
+				"Service-Kosten": {
+					"monatlich": "29.60",
+					"Vorauszahlung": "0.00",
+					"12 Monate": "355.16"
+				},
+				"Eigenschaften": {
+					"Tenancy": "Gemeinsame Instances",
+					"Betriebssystem": "Linux",
+					"Workload": "Consistent, Anzahl der Instances: 1",
+					"Erweiterte EC2-Instance": "t4g.medium",
+					"Pricing strategy": "Compute Savings Plans 3yr No Upfront",
+					"Überwachung aktivieren": "deaktiviert",
+					"EBS Speichermenge": "100 GB",
+					"DT Eingehend: Not selected": "0 TB pro Monat",
+					"DT Ausgehend: Not selected": "0 TB pro Monat",
+					"DT Intraregional:": "0 TB pro Monat"
+				}
+			},
+			{
+				"Servicename": "EBS",
+				"Region": "Europa (Zürich)",
+				"Status": "",
+				"Service-Kosten": {
+					"monatlich": "94.00",
+					"Vorauszahlung": "0.00",
+					"12 Monate": "1128.05"
+				},
+				"Eigenschaften": {
+					"Gesamt-EBS-Speicher": "150 GB",
+					"Erwartete tägliche Änderungsrate": "0.04",
+					"Täglicher Aufbewahrungszeitraum für Backups": "7 Tage",
+					"Wöchentlicher Aufbewahrungszeitraum für Backups": "1 Monate",
+					"Monatlicher Aufbewahrungszeitraum für Backups": "3 Monate"
+				}
+			},
+			{
+				"Servicename": "Classic Load Balancer",
+				"Region": "Europa (Zürich)",
+				"Status": "",
+				"Service-Kosten": {
+					"monatlich": "88.33",
+					"Vorauszahlung": "0.00",
+					"12 Monate": "1059.96"
+				},
+				"Eigenschaften": {
+					"Anzahl der Classic Load Balancer": "1",
+					"Verarbeitete Byte pro CLB": "10 GB pro Stunde"
+				}
+			}
+		]
+	}
+}
