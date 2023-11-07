@@ -5,3 +5,5 @@ Ein Reverse-Proxy fungiert als eine Art Vermittler, der zwischen einem oder mehr
 Der Unterschied zwischen einem Weiterleitungsproxy und einem Reverse-Proxy mag zunächst klein wirken, ist jedoch von großer Bedeutung. Einfach gesagt: Ein Weiterleitungsproxy steht zwischen einem Client und garantiert, dass der Ursprungsserver nie direkt mit diesem spezifischen Client in Kontakt tritt. Im Gegensatz dazu platziert sich ein Reverse-Proxy vor einem Ursprungsserver und gewährleistet, dass kein Client jemals direkt mit diesem Ursprungsserver kommuniziert.
 
 In der Instanz konnte ein Hot Swap durchgeführt werden, sie wurde im laufenden Betrieb mit dem nötigen Speicher erweitert.
+
+Im DNS müssen wir einen Alias für den FQDN von AWS konfigurieren. Mit einem CName-Eintrag kann man diesen Alias erstellen und verwenden.
